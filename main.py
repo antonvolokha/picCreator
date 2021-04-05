@@ -21,7 +21,7 @@ def makeCommit():
 
   gitAdd(filename)
   gitCommit()
-  #gitPush()
+  gitPush()
 
 def gitAdd(fileName):
     cmd = ['git', 'add', fileName]
@@ -29,7 +29,7 @@ def gitAdd(fileName):
     p.wait()
 
 def gitCommit():
-  cmd = ['git', 'commit', '-m', '"Update data"']
+  cmd = ['git', 'commit', '-m', '"update"']
   p = subprocess.Popen(cmd, cwd=cwd)
   p.wait()
 
