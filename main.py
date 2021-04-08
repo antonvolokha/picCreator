@@ -8,14 +8,19 @@ data = {
   'sun': [0,1,1,0,0,0,0,0,0,0,0,0,0,0],
   'mon': [1,0,0,1,0,0,0,0,0,0,0,1,0,0],
   'tue': [1,0,0,1,1,1,1,1,1,1,1,1,1,0],
-  'wen': [0,1,1,1,0,0,0,0,0,0,0,0,1,1],
+  'wed': [0,1,1,1,0,0,0,0,0,0,0,0,1,1],
   'thu': [1,0,0,1,1,1,1,1,1,1,1,1,1,0],
   'fri': [1,0,0,1,0,0,0,0,0,0,0,1,0,0],
   'sut': [0,1,1,0,0,0,0,0,0,0,0,0,0,0],
 }
 
+def runLog():
+  filename = cwd + '/info.log'
+  with open(filename, 'a+', encoding='utf-8') as file:
+    file.write('run at %s\n' % (datetime.today().strftime('%A %B %d')))
+
 def makeCommit():
-  filename = 'commitfile'
+  filename = cwd + '/commitfile'
   with open(filename, 'a+', encoding='utf-8') as file:
     file.write('Today in a wary good %s\n' % (datetime.today().strftime('%A %B %d')))
 
